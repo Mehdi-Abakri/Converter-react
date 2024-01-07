@@ -1,0 +1,45 @@
+@use 'src/styles/variables';
+
+.currencies {
+  text-align: left;
+  /* overflow-y : si ça dépasse en hauteur, une scrollbar s'affiche */
+  overflow-y: auto;
+  max-height: 150px;
+  color: variables.$mainColor;
+  margin-top: variables.$gutter;
+
+  // .currencies-search {
+  //   border: none;
+  //   width: 100%;
+  //   color: variables.$mainColor;
+  //   font-size: 1.2em;
+  //   padding: variables.$gutter;
+  //   margin-top: variables.$gutter;
+
+  //   // sera remplacé en CSS par .currencies .currencies-search::placeholder
+  //   &::placeholder {
+  //     // on redéfinit la couleur d'écriture du placeholder
+  //     color: variables.$altColor;
+  //   }
+  }
+
+  .currency {
+    border-top: 1px solid variables.$altColor;
+
+    transition: background-color variables.$slowTransition;
+
+    &:hover {
+      background-color: variables.$altColor;
+      transition: background-color variables.$fastTransition;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      color: variables.$mainColor;
+      width: 100%;
+      text-align: left;
+      padding: variables.$gutter;
+      font-weight: variables.$fwNormal;
+    }
+}
